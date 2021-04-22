@@ -27,10 +27,8 @@ class Artist
   end
 
   def add_song(song)
-    #song.artist = self unless song.artist
+    song.artist = self unless song.artist
     @songs << song
-    song.artist = self
-    songs.each { |song| add_song(song) }
   end
 
   def songs
