@@ -25,7 +25,7 @@ class Genre
     new(name).save
   end
 
-  def songs 
+  def songs
     Song.all.select { |s| s.genre == self }
   end
 
