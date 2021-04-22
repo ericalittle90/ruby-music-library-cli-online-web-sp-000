@@ -5,7 +5,7 @@ class Song
 
   @@all = []
 
-  def initialize(name, artist=nil)
+  def initialize(name, artist = nil)
     @name = name
     self.artist = artist if artist
   end
@@ -20,11 +20,11 @@ class Song
 
   def save
     @@all << self
+    self
   end
 
   def self.create(name)
     new(name).save
-    self
   end
 
   def artist=(artist)
