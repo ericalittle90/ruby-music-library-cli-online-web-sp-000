@@ -34,7 +34,7 @@ class Artist
   end
 
   def genres
-    Genre.all.select { |g| g.artist == self }
+    Song.collect { |s| song.genre}.uniq
   end
 
 end
