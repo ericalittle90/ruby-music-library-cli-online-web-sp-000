@@ -57,7 +57,7 @@ class Song
     self.new(song_name, artist, genre)
   end
 
-  def self.create_from_filename
+  def self.create_from_filename(filename)
     new_from_filename(filename).save
   end
 
