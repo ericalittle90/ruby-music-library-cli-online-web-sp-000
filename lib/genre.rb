@@ -19,11 +19,15 @@ class Genre
 
   def save
     @@all << self
-    self 
+    self
   end
 
   def self.create(name)
     new(name).save
+  end
+
+  def songs
+    Song.all.select { |s| s.genre == self }
   end
 
 end
