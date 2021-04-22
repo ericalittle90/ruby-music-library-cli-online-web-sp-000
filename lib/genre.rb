@@ -1,12 +1,11 @@
 class Genre
 
-  attr_accessor :name, :songs
+  attr_accessor :name,
 
   @@all = []
 
   def initialize(name)
     @name = name
-    @songs = []
   end
 
   def self.all
@@ -26,8 +25,5 @@ class Genre
     new(name).save
   end
 
-  def songs
-    Song.all.select { |s| s.genre == self }
-  end
 
 end
